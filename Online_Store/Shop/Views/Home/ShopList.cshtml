@@ -1,0 +1,15 @@
+﻿@model IList<ShopItem>
+
+<h1>Shop Items</h1>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>
+            <h2>@item.Name</h2>
+            <p>@item.Description</p>
+            <p>Price: $@item.Price</p>
+            <img src="@item.imgURL" alt="@item.Name" />
+        </li>
+    }
+</ul>

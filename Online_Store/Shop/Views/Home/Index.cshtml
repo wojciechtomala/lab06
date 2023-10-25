@@ -1,0 +1,24 @@
+﻿@model IList<ShopItem>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Grocery Store!</h1>
+
+    <h1>Shop Items</h1>
+
+    <div class="shop-item-list">
+        @foreach (var item in Model)
+        {
+            <div>
+                <div>
+                    <img src="@item.imgURL" alt="@item.Name" />
+                    <h2>@item.Name</h2>
+                    <p>Price: $@item.Price</p>
+                </div>
+            </div>
+        }
+    </div>
+</div>
