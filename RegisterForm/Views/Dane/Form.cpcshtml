@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Formularz";
+}
+@using zajecia3.Models;
+@model Dane;
+<div class="text-center">
+    <form asp-action="Form" method="post">
+        <div>
+            <label asp-for="Imie">Twoje imie:</label>
+            <input asp-for="Imie" />
+        </div>
+        <div>
+            <label asp-for="Nazwisko">Twoje nazwisko:</label>
+            <input asp-for="Nazwisko" />
+        </div>
+        <div>
+            <label asp-for="Email">Twój adres email:</label>
+            <input asp-for="Email" />
+        </div>
+        <div>
+            <label asp-for="Temat">Temat wiadomości:</label>
+            <input asp-for="Temat" />
+        </div>
+        <div>
+            <label asp-for="Tresc">Treść wiadomości:</label>
+            <input asp-for="Tresc" />
+        </div>
+        <div>
+            <input type="submit"/>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Formularz Rejestracyjny";
+}
+@using zajecia3.Models;
+@model Dane;
+
+<div class="text-center">
+    <h1>Formularz rejestracyjny</h1>
+    <p id="error-messages"></p>
+    <form asp-action="Form" method="post">
+        <div asp-validation-summary="All"></div>
+        <div>
+            <label asp-for="Imie">Twoje imie:</label>
+            <input asp-for="Imie" />
+        </div>
+        <div>
+            <label asp-for="Nazwisko">Twoje nazwisko:</label>
+            <input asp-for="Nazwisko" />
+        </div>
+        <div>
+            <label asp-for="Wiek">Twój wiek:</label>
+            <input asp-for="Wiek" />
+        </div>
+        <div>
+            <label asp-for="Email">Twój adres email:</label>
+            <input asp-for="Email" />
+        </div>
+        <div>
+            <label asp-for="Haslo">Twoje hasło:</label>
+            <input asp-for="Haslo" />
+        </div>
+        <div>
+            <label asp-for="PotwierdzenieHasla">Powtórz hasło:</label>
+            <input asp-for="PotwierdzenieHasla" />
+        </div>
+        <div>
+            <label asp-for="NrTelefonu">Twój numer telefonu:</label>
+            <input asp-for="NrTelefonu" type="number"/>
+        </div>
+        <div>
+            <label asp-for="WybraneMiasto">Twoje miasto:</label>
+            <select asp-for="WybraneMiasto" asp-items="Html.GetEnumSelectList<Dane.Miasto>()"></select>
+        </div>
+        <div>
+            <input type="reset" value="Resetuj"/>
+            <input type="submit" value="Utwórz konto"/>
+        </div>
+    </form>
+</div>
